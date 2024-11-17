@@ -46,10 +46,8 @@ const SignUp = () => {
   return (
     <Card className="w-full max-w-md mx-auto">
       <CardHeader>
-        <CardTitle>Sign In</CardTitle>
-        <CardDescription>
-          Welcome back! Please sign in to continue.
-        </CardDescription>
+        <CardTitle>Sign Up</CardTitle>
+        <CardDescription>Create your account to get started.</CardDescription>
       </CardHeader>
 
       <CardContent>
@@ -108,9 +106,9 @@ const SignUp = () => {
 
       <CardFooter className="flex justify-center">
         <p className="text-sm text-muted-foreground">
-          Don&apos;t have an account yet?
-          <Link href="/sign-up" className="text-primary hover:underline">
-            Sign up
+          Already have an account?{"  "}
+          <Link href="/sign-in" className="text-primary hover:underline">
+            Sign in
           </Link>
         </p>
       </CardFooter>
