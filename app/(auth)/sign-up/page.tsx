@@ -26,7 +26,7 @@ import { Button } from "@/components/ui/button";
 import { formSchema } from "@/lib/auth-schema";
 import { authClient } from "@/lib/auth-client";
 import { toast } from "@/hooks/use-toast";
-import { redirect } from "next/dist/server/api-utils";
+import { redirect, RedirectType } from "next/navigation";
 
 const SignUp = () => {
   const form = useForm<z.infer<typeof formSchema>>({
@@ -55,6 +55,7 @@ const SignUp = () => {
         },
         onSuccess: () => {
           form.reset();
+          redirect("/sign-in");
         },
         onError: (ctx) => {
           alert(ctx.error.message);
